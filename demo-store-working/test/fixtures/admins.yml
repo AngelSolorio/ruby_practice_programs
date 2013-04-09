@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 100
+  email: 'one@store.com'
+  password_digest: '$2a$10$rIeH0X.cSYan3T6ZRn62u.RTRyPPHNGvEdzV1q99TJW3WFPjwcVPK'
+
+two:
+  id: 200
+  email: 'second@store.com'
+  password_digest: '$2a$10$rIeH0X.cSYan3T6ZRn62u.RTRyPPHNGvEdzV1q99TJW3WFPjwcVPK'

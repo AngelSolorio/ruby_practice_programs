@@ -1,0 +1,105 @@
+es:
+
+  app_name: 'Tienda de Productos'
+
+  actions:
+    update: 'Actualizar'
+    change: 'Modificar'
+
+  login_errors:
+    message: 'Por favor verifique sus credenciales'
+
+  backend:
+    session:
+      new:
+        new_session: 'Iniciar sesion'
+        email: 'Correo electronico'
+        password: 'Clave'
+        login: 'Iniciar sesion'
+
+    profile:
+      title: 'Actualice su perfil'
+      help: 'Introduzca su nombre en la forma. Opcionalmente si desea modificar su clave, puede introducir esta y su confirmacion para realizar el cambio.'
+      password_help: 'Para cambiar su clave, introduzca la nueva y su confirmacion. La clave debe de tener un minimo de 6 caracteres.'
+      password: 'Clave'
+      password_confirmation: 'Confirmar clave'
+
+      show:
+        update_profile: 'Actualice su perfil'
+        title: 'Perfil'
+        name: 'Nombre'
+        email: 'Correo electronico'
+      new:
+        already_have_profile: 'Usted ya cuenta con perfil'
+        
+    products:
+      create:
+        product_created: 'Producto creado'
+        product_no_created: 'Error al crear el producto'
+      edit:
+        product_no_found: 'Producto no encontrado'
+      update:
+        product_updated: 'Producto actualizado'
+        product_no_updated: 'Error al actualizar el producto'
+      verify_admin_and_product:
+        product_no_found: 'Producto no encontrado'
+
+  layouts:
+    application:
+
+  shared:
+    header:
+      welcome: 'Bienvenido %{email}'
+      logout: 'Cerrar sesion'
+
+  flash:
+    action:
+      alert:
+        create: 'Fallo la creacion de %{resource}'
+      notice:
+        create: 'Su %{resource} fue actualizado(a)'
+        update: 'Su %{resource} fue actualizado(a)'
+
+    backend:
+      profile:
+        alert:
+          create: 'Su perfil no pudo ser actualizado'
+          update: 'Su perfil no pudo ser actualizado'
+
+  activerecord:
+    models:
+      admin: 'Administrador'
+      profile: 'Perfil'
+    attributes:
+      admin:
+        email: 'Correo electronico'
+      profile:
+        name: 'Nombre'
+
+    errors:
+      messages:
+        blank: 'No puede estar en blanco'
+        too_short: 'demasiado corto, minimo necesita %{count} caracteres'
+        confirmation: 'no coincide con la clave'
+
+      models:
+        profile:
+          attributes:
+            avatar_file_size:
+              less_than: 'demasiado grande, maximo %{max}'
+            avatar_content_type:
+              invalid: 'archivo invalido'
+
+
+  number:
+    human:
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB

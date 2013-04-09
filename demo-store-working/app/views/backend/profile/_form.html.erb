@@ -1,0 +1,27 @@
+<%= form_for profile, url: backend_profile_path, html: { multipart: true } do |form| %>
+  <%= display_alert %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'medium' %>
+  <%= field_error profile, :name %>
+  <br/>
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar %>
+  <%= field_error profile, :avatar_content_type %>
+  <%= field_error profile, :avatar_file_size %>
+  <hr>
+  <p class="form-help"><%= t('backend.profile.password_help') %></p>
+  <%= form.fields_for :admin do |admin_fields| %>
+    <%= admin_fields.hidden_field :id unless profile.new_record? %>
+    <%= admin_fields.label :password, t('backend.profile.password') %>
+    <%= admin_fields.password_field :password %>
+    <%= field_error profile, :'admin.password' %>
+    <br/>
+    <%= admin_fields.label :password_confirmation, t('backend.profile.password_confirmation') %>
+    <%= admin_fields.password_field :password_confirmation %>
+    <%= field_error profile, :'admin.password_confirmation' %>
+  <% end %>
+  <br/>
+  <div class='actions'>
+    <%= form.submit t('actions.update'), class: 'btn large', id: 'update' %>
+  </div>
+<% end %>

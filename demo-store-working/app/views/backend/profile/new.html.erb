@@ -1,0 +1,7 @@
+<div id="content">
+  <%= display_notice %>
+  <h2><%= t('backend.profile.title') %></h2>
+  <p class="form-help"><%= t('backend.profile.help') %></p>
+
+  <%= render partial: 'form', locals: { profile: @profile } %>
+</div>

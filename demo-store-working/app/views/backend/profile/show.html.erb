@@ -1,0 +1,20 @@
+<div id="content">
+  <%= display_notice %>
+  <h2><%= t('.title') %></h2>
+  <div class="row">
+    <div class="five avatar-medium">
+      <%= image_tag @profile.avatar.url(:medium) %>
+    </div>
+    <div class="six form">
+      <div class="field">
+        <span class='label'><%= t('.name') %></span>
+        <span class='input'><%= @profile.try(:name )%></span>
+      </div>
+      <div class="field">
+        <span class='label'><%= t('.email') %></span>
+        <span class='input'><%= current_admin.email %></span>
+      </div>
+      <%= link_to t('actions.change'), edit_backend_profile_path, class: 'btn large', id: 'update' %>
+    </div>
+  </div>
+</div>

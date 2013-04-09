@@ -1,0 +1,22 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: 'TV'
+  description: 'Samsung Smart TV 42"'
+  price: 9000
+  inventory: 5
+  active: true
+  tags: TV, Samsung
+  admin_id: 100
+
+two:
+  id: 2
+  name: 'TV'
+  description: 'LG Smart TV 36"' 
+  price: 7000
+  inventory: -1
+  active: false
+  tags:
+  admin_id: 100

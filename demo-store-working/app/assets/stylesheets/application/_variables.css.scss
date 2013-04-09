@@ -1,0 +1,21 @@
+$gw-column: 67px;          // Column Width
+$gw-gutter: 20px;           // Gutter Width
+
+$gray: #8c8c8c; //#10222B;
+$darker-gray: #4c4c4c;
+$lighten-gray: #ccc;
+
+$green: #95AB63;
+$lighten-green: #F6FFE0;
+$padding: 2em;
+
+$error-color: #b94a48;
+$alert-background: #f2dede;
+$alert-foreground: $error-color;
+
+$notice-color: $green;
+$notice-background: #F6FFE0;
+$notice-foreground: $notice-color;
+
+@include font-face(Merienda, 'merienda-regular', $asset-pipeline: true);
+@include font-face(Merienda, 'merienda-bold', bold, $asset-pipeline: true);

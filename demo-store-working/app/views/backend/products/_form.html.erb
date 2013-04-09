@@ -1,0 +1,48 @@
+<%= flash[:alert] %>
+
+<%= form_for product, url: backend_product_path(product), html: { multipart: true } do |form| %>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+	<%= field_error product, :name %>
+	<p>
+	<%= form.label :description %><br>
+	<%= form.text_area :description, :size => '40x5' %>
+	<%= field_error product, :description %>	
+	<p>
+	<%= form.label :price %>
+	<%= form.text_field :price %>
+	<%= field_error product, :price %>
+	<p>
+	<%= form.label :inventory %>
+	<%= form.text_field :inventory %>
+	<%= form.check_box :inventory_check %>
+	<%= field_error product, :inventory %>
+	<p>
+	<%= form.label :active %>
+	<%= form.check_box :active %>
+	<%= field_error product, :active %>
+	<p>
+	<%= form.label :tags %>
+	<%= form.text_field :tags %>
+	<%= field_error product, :tags %>
+	<p>
+
+	<div id="images_product" style="position:absolute; top: 60px; left: 550px">
+	<h3>Change image</h3>	
+  <% @product.images.each do |img| %>
+    <%= form.fields_for :images, img do |builder| %>
+      <% if img.new_record? %>
+        <%= builder.file_field :image %>
+      <% else %>
+        <%= image_tag img.image.url(:thumb) %>
+        <%= builder.check_box :_destroy %>
+        <%= builder.label :_destroy, 'Eliminar' %>
+      <% end %>
+      <br />
+    <% end %>
+  <% end %>
+	</div>
+
+  <%= form.submit "Save", class: 'btn large', id: 'update' %>
+<% end %><p>
+<%= link_to "Regresar", backend_products_path %>

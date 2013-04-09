@@ -1,0 +1,66 @@
+.login-area, .logo {
+  width: grid-width(6);
+  margin: auto;
+}
+
+.login-area {
+  background-color: white;
+
+  h2 {
+    padding: $padding / 2;
+    padding-bottom: $padding / 4;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  form {
+    padding: 0 $padding ($padding / 2);
+
+    input[type='text'], input[type='password'] {
+      width: 98%;
+      font-size: 1.5em;
+      padding: $padding / 10;
+      margin-bottom: $padding / 4;
+    }
+
+    #login {
+      color: $darker-gray;
+      font-size: 1.2em;
+      font-weight: normal;
+      width: 100%;
+    }
+  }
+}
+
+.logo {
+  text-align: center;
+
+  h1{
+    font-family: Merienda;
+    font-weight: bold;
+    font-size: 3em;
+  }
+}
+
+
+
+.description { 
+  margin:0 0 .5em 0;
+  font-size: 12px;
+  color: #000000;
+}
+
+dl{
+    width:640px;
+    margin:0 auto;
+    border-bottom:1px dashed #ccc;
+    padding:10px;
+    overflow:hidden;
+    background:#f2f2f2;
+}
+
+dl img{
+    float:left;
+    margin:0 10px 0 0;
+    border:1px solid #000;
+}

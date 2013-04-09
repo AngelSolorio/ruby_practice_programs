@@ -1,0 +1,15 @@
+<div class='logo'>
+  <h1><%= t(:app_name) %></h1>
+</div>
+<div class='login-area'>
+  <h2><%= t('.new_session') %></h2>
+  <%= form_for @admin, url: backend_session_create_path do |form| %>
+    <%= display_alert %>
+    <%= form.text_field :email, placeholder: t('.email') %>
+    <br/>
+    <%= form.password_field :password, placeholder: t('.password') %>
+    <br/>
+    <%= form.submit t('.login'), id: 'login' %>
+
+  <% end %>
+</div>

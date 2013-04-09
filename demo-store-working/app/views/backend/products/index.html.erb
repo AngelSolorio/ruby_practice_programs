@@ -1,0 +1,21 @@
+<div id="content_products">
+  <h2>My Products</h2>
+  <%= link_to "New", new_backend_product_path %><p>
+  <div id="list_products">
+    <% @products.each do |product| %>
+    <dl>
+      <dt>
+        <%= show_image_to_product(product) %>
+        <%= product.name %>
+      </dt>
+      <dd>
+          <p class="description" ><%= product.description %></p>          
+      </dd>
+      <dt>
+        <%= link_to "Ver", backend_product_path(product) %>
+        <%= link_to "Editar", edit_backend_product_path(product) %>
+      </dt>
+    </dl>
+    <% end %>
+  </div>
+</div>

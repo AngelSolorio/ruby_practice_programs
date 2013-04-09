@@ -1,0 +1,17 @@
+<h2> Producto </h2>
+
+	Nombre: <%= @product.name %><br />
+	Descripcion: <%= @product.description %><br />
+	Precio: <%= number_to_currency(@product.price)%><br />
+	Inventario: <%= @product.inventory > 0 ? @product.inventory : "Infinito" %><br />
+  Tags: <%= @product.tags %><p>
+	
+	<% if @product.images.size > 0 %>
+		Imagenes:<br>
+		<%  @product.images.each do |image| %>
+			<%= image_tag image.image.url(:thumb) %>
+		<% end %>
+	<% end %>		
+
+<p>
+<%= link_to 'Atras', backend_products_path %> | <%= link_to 'Editar', edit_backend_product_path(@product) %>
