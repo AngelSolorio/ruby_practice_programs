@@ -56,7 +56,6 @@ class Graph < Array
     until nodes.empty?
     	#Finds the nearest nodes of the array 'nodes'
     	nearest_node = nodes.inject do |node1, node2|
-    		puts distances
         next node2 unless distances[node1]
         next node1 unless distances[node2]
         next node1 if distances[node1] < distances[node2]
@@ -97,8 +96,8 @@ graph.connections('C', 'B', 2)
 
 #Prints the output data
 puts "***********************************************"
-puts "Nodes of the graph = #{p graph}"
-puts "Length from node A to node B = #{p graph.get_length_to('A', 'B')}"
-puts "Neighbors to node A = #{p graph.get_neighbors('A')}"
-puts "The shortest road from node A to B is = #{p graph.get_shortestroad('A', 'B')}"
+puts "Nodes of the graph = #{graph}"
+puts "Length from node A to node B = #{graph.get_length_to('A', 'B')}"
+puts "Neighbors to node A = #{graph.get_neighbors('A')}"
+puts "The shortest road from node A to B is = #{graph.get_shortestroad('A', 'B')}"
 puts "***********************************************"
